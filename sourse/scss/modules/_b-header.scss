@@ -1,0 +1,62 @@
+.b-header{
+    &__container{
+        position: relative;
+        padding: em(8) 0 em(8) 207px;
+}
+    &__top{
+        $font-size: 14;
+        font-size: em($font-size);
+        line-height: 30px;
+        border-bottom: 1px solid #f6f7f9;
+        box-shadow: 0 0 0 1px #e1e5ea;
+        .black{
+            color: #000;
+        }
+    }
+    &__bottom{
+        padding: em(10) 0 em(11);
+        border-top: 1px solid #e8ecef;
+        background-color: #f7f8fa;
+    }
+    &__nav-link{
+        border-right: 1px dashed #c2c5c6;
+        font-weight: 500;
+        $font-size: 17;
+        font-size: em($font-size);
+        color: #000;
+        padding: 0 em(21, $font-size);
+        &:first-child{
+            padding-left: 0;
+        }
+        &.current{
+            font-weight: 300;
+            text-decoration: none;
+            cursor: default;
+        }
+    }
+    &__logo{
+        display: block;
+        width: 174px;
+        height: 147px;
+        background-color: #259b95;
+        border-radius:0 0 5px 5px;
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        img{
+            display: block;
+            margin: 22px auto 0;
+        }
+    }
+    &_home{
+        background: url(../images/promo-bg.jpg) no-repeat center top #eceef2;
+    }
+    &_home &__top{
+        background-color: #ffffff;
+    }
+    &_home &__bottom{
+        background-color: transparent;
+    }
+}

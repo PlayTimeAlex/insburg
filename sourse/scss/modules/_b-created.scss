@@ -1,0 +1,15 @@
+.b-created{
+    $font-size: 13;
+    font-size: em($font-size);
+    color: #fff;
+    text-align: right;
+    padding: em(4, $font-size) 0 em(3, $font-size);
+    &__imagelink{
+        display: inline-block;
+        vertical-align: middle;
+        padding-right: 18px;
+    }
+    a{
+        color: #00d2ff;
+    }
+}

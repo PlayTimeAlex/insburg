@@ -1,0 +1,84 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,400italic,500italic,700italic&subset=latin,cyrillic);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic);
+@font-face {
+    font-family: 'als_rublregular';
+    src: url('../fonts/rouble/rouble-webfont.eot');
+    src: url('../fonts/rouble/rouble-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/rouble/rouble-webfont.woff') format('woff'),
+    url('../fonts/rouble/rouble-webfont.ttf') format('truetype'),
+    url('../fonts/rouble/rouble-webfont.svg#als_rublregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.rub{
+    font-family: 'als_rublregular';
+}
+/*
+300
+400
+500
+*/
+
+@import "modules/base";
+@import "modules/reset";
+@import "modules/grid";
+.container{
+    width: 980px;
+    margin: 0 auto;
+}
+.align-right{
+    text-align: right;
+}
+.body_inner{
+    background-color: #f1f2f5;
+}
+.ui-tooltip{
+    position: absolute;
+    opacity: 0.8;
+    $font-size: 13;
+    font-size: em($font-size);
+    font-weight: 300;
+    background-color: rgba(213, 216, 223, 1);
+    padding: em(14, $font-size) em(34, $font-size);
+    border:2px solid #20afa5;
+    box-shadow: 0 0 5px #20afa5;
+    z-index: 600;
+    border-radius: 30px;
+    &:after{
+        content:"";
+        display: block;
+        position: absolute;
+        left: 50%;
+        bottom: -7px;
+        margin-left: -5px;
+        border-top:5px solid #20afa5;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+    }
+}
+.ui-helper-hidden-accessible{
+    display: none;
+}
+
+
+@import "modules/pr";
+@import "modules/b-header";
+@import "modules/b-pagehead";
+@import "modules/b-breadcrumb";
+@import "modules/b-popup";
+@import "modules/b-help";
+@import "modules/b-catalog";
+@import "modules/b-text";
+@import "modules/b-ins-menu";
+@import "modules/b-page";
+@import "modules/b-form";
+@import "modules/b-features";
+@import "modules/b-drivers";
+@import "modules/b-promo";
+@import "modules/b-created";
+@import "modules/b-footer";
+@import "modules/b-review";
+@import "modules/b-order";
+@import "modules/b-calc";
+@import "modules/b-result";
+@import "modules/ui";

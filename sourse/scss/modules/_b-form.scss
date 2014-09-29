@@ -1,0 +1,182 @@
+.b-form{
+    &__el{
+        padding-bottom: em(12);
+        &_noh3{
+            margin-top: em(20);
+        }
+    }
+    &__text{
+        border: none;
+        $background-color: #edeff3;
+        background-color: $background-color;
+        transition: background-color 0.3s ease;
+        $font-size: 14;
+        font-size: em($font-size);
+        height: em(41, $font-size);
+        padding: 0 em(17, $font-size);
+        border-radius:5px;
+        color: #000;
+        box-sizing: border-box;
+        display: inline-block;
+        &:focus{
+            background-color: darken($background-color, 5);
+        }
+        &_block{
+            display: block;
+            width: 100%;
+        }
+        &::-webkit-input-placeholder {
+            color: rgba(0,0,0,.4);
+        }
+        &::-moz-placeholder {  /* Firefox 19+ */
+            color: rgba(0,0,0,.4);
+        }
+        &:-ms-input-placeholder {
+            color: rgba(0,0,0,.4);
+        }
+    }
+    &__checkbox-l{
+        color: rgba(0, 0, 0, .5);
+        $font-size: 14;
+        font-size: em($font-size);
+        padding: em(9, $font-size) em(20, $font-size) em(10, $font-size) em(27, $font-size);
+        display: inline-block;
+        &_block{
+            display: block;
+            box-sizing: border-box;
+        }
+        &_large{
+            $font-size: 17;
+            font-size: em($font-size);
+            padding: em(7, $font-size) em(32, $font-size) em(8, $font-size) em(27, $font-size);
+            font-weight: 400;
+            color: rgba(0, 0, 0, 1);
+        }
+        &:last-child{
+            padding-right: 0;
+        }
+        .jq-radio, .jq-checkbox{
+            width: 17px;
+            height: 17px;
+            box-sizing: border-box;
+            border: 1px solid #dfdfdf;
+            border-radius:1px;
+            vertical-align: middle;
+            border-radius: 50%;
+            margin:-3px 11px 0 -27px;
+            &.checked{
+                .jq-radio__div{
+                    background: #21b6ab;
+                    background-clip: padding-box;
+                }
+            }
+        }
+        .jq-checkbox{
+            border-radius: 0;
+            &.checked{
+                .jq-checkbox__div{
+                    background: #21b6ab;
+                    background-clip: padding-box;
+                }
+            }
+        }
+        .jq-radio__div, .jq-checkbox__div{
+            border:2px solid transparent;
+            box-sizing: border-box;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+        }
+        .jq-checkbox__div{
+            border-radius: 0;
+        }
+    }
+
+    &__select{
+        &.jq-selectbox{
+            border: none;
+            $background-color: #edeff3;
+            background-color: $background-color;
+            transition: background-color 0.3s ease;
+            height: em(41);
+            border-radius:5px;
+            color: #000;
+            box-sizing: border-box;
+            position: relative;
+            &.focused{
+                background-color: darken($background-color, 5);
+            }
+            &.opened{
+                border-radius:5px 5px 0 0;
+            }
+        }
+        .jq-selectbox{
+            &__select-text{
+                $font-size: 14;
+                font-size: em($font-size);
+                line-height: em(41, $font-size);
+                padding: 0 em(7, $font-size) 0 em(18, $font-size);
+                cursor: default;
+                overflow: hidden;
+                position: relative;
+                white-space: nowrap;
+                &.placeholder{
+                    color: rgba(0,0,0,.4);
+                }
+            }
+            &__select{
+                padding-right: 38px;
+            }
+            &__trigger{
+                position: absolute;
+                top: 0;
+                right: 17px;
+                width: 28px;
+                height: 100%;
+            }
+            &__trigger-arrow{
+                width: 18px;
+                height: 11px;
+                display: block;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin: -5px -9px 0 0;
+                background:url(../images/sprite.png) no-repeat -90px 0;
+                opacity: .4;
+            }
+            .opened &__trigger-arrow{
+                background-position: -90px -11px;
+            }
+            &__dropdown{
+                width: 100%!important;
+                border-radius:0 0 5px 5px;
+                li{
+                    $background-color: #edeff3;
+                    background-color: $background-color;
+                    transition: background-color 0.3s ease;
+                    white-space:normal!important;
+                    $font-size: 14;
+                    font-size: em($font-size);
+                    padding: em(5, $font-size) em(17, $font-size);
+                    cursor: default;
+                    &:hover{
+                        background-color: darken($background-color, 5);
+                    }
+                    &:first-child{
+                        display: none!important;
+                    }
+                }
+            }
+        }
+        &_block{
+            &.jq-selectbox{
+                width: 100%;
+                display: block!important;
+            }
+        }
+    }
+    &__rc-h3height{
+        padding: em(21) 0 em(10);
+    }
+}

@@ -1,0 +1,110 @@
+.b-drivers{
+    &__count-wrap{
+        position: relative;
+        float: left;
+        padding-right: em(150);
+    }
+    &__count-text{
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: #f1f3f7;
+        color: rgba(0, 0, 0, .5);
+        $font-size: 14;
+        font-size: em($font-size);
+        font-weight: 400;
+        padding: em(9, $font-size) em(20, $font-size);
+        &:before{
+            content:"";
+            display: block;
+            position: absolute;
+            border-right:5px solid #f1f3f7;
+            border-bottom:5px solid transparent;
+            border-top:5px solid transparent;
+            left: -5px;
+            top: 50%;
+            margin-top: -5px;
+        }
+    }
+    &__count{
+        padding: em(3) 0 em(2) 0;
+        > li{
+            display: block;
+            float: left;
+            width: 28px;
+            height: 32px;
+            background: url(../images/sprite.png) no-repeat -108px 0;
+            opacity: .1;
+            padding: 0 em(22) 0 0;
+            background-clip: content-box;
+            transition: opacity 0.3s ease;
+            &.active, &.selected{
+                opacity: .5;
+            }
+            &.noactive.selected{
+                opacity: .1;
+            }
+            &:last-child{
+                padding-right: 0;
+            }
+            &:hover{
+                opacity: .5;
+            }
+        }
+    }
+    &__template{
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+    &__area{
+        counter-reset: section;
+
+    }
+    &__cart{
+        h3:after{
+            counter-increment: section;
+            content: " #"counter(section);
+        }
+        &_kasko{
+            margin-top: em(30);
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAADCAYAAABxhjRXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkFBMjZGRTM5NDY0MDExRTRCQ0QyRTZDNkQyOTc4QTdFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkFBMjZGRTNBNDY0MDExRTRCQ0QyRTZDNkQyOTc4QTdFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QUEyNkZFMzc0NjQwMTFFNEJDRDJFNkM2RDI5NzhBN0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QUEyNkZFMzg0NjQwMTFFNEJDRDJFNkM2RDI5NzhBN0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4ePda3AAAAXklEQVR42kyNSw6AMAhEaa2fuPZQ3P8eujWN1grmmUDyUjowQ1LVTUQ6NOPhvcH/sUpgMDKkQsi/tBoTvRBWCXfDyDyjXcx9r7tpD1cT11yfCV/QOsbDOAlo8NUrwADiXxneDVHLcgAAAABJRU5ErkJggg==) repeat-x left top;
+        }
+    }
+    &__unlim{
+        margin-top: 30px;
+        display: inline-block;
+    }
+    &__driver{
+        display: block;
+        float: left;
+        width: 28px;
+        height: 32px;
+        background: url(../images/sprite.png) no-repeat -108px 0;
+        opacity: .5;
+        padding: 0 em(15) 0 0;
+        background-clip: content-box;
+    }
+    &__p_dlist{
+        overflow: hidden;
+        padding-bottom: em(10);
+    }
+    &__p-title{
+        $font-size: 17;
+        font-size: em($font-size);
+        padding: em(10, $font-size) 0;
+    }
+    &__p-detalis{
+        padding-bottom: em(15);
+        > span{
+            color: rgba(0,0,0,.4);
+            $font-size: 14;
+            font-size: em($font-size);
+            display: inline-block;
+            padding: 0 em(30, $font-size) 0 0;
+            &:last-child{
+                padding-left: 0;
+            }
+        }
+    }
+}

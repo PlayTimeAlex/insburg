@@ -1,0 +1,30 @@
+.b-footer{
+    background-color: #000;
+    padding: em(25) 0;
+    &__logo{
+        $font-size: 13;
+        font-size: em($font-size);
+        color: rgba(255, 255, 255, .7);
+        line-height: 1.308;
+        padding: 0 0 0 85px;
+        background: url(../images/footerlogo.png) no-repeat 0 50%;
+    }
+    &__nav{
+        text-align: center;
+        padding: em(6) 0 em(5);
+        > a{
+            color: #fff;
+            $font-size: 15;
+            font-size: em($font-size);
+            display: inline-block;
+            text-decoration: none;
+            margin-left: em(10, $font-size);
+            &:hover{
+                text-decoration: underline;
+            }
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+    }
+}

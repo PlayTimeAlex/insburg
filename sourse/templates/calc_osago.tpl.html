@@ -1,0 +1,103 @@
+@@include('blocks/_b-header.html')
+@@include('blocks/_inneer-header.html')
+@@include('blocks/_b-pagehead-calc.html', {
+"modclass": "",
+"title": "Калькулятор"
+})
+        <div class="b-page b-page_ncontent b-page_calc">
+            <div class="container">
+                <form action="result.html">
+                    <h3>Мощность (л.с.)<span class="pr-help js-tooltip" title="Текст подсказки"></span></h3>
+                    <div class="b-form__el">
+                        <div class="pr-slider" data-min="100" data-max="1000">
+                            <div class="pr-slider__handle handle" style="min-width: 70px;"><span class="value">100</span> л.c</div>
+                            <input class="pr-slider__val" type="hidden"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span3">
+                            <h3>Регион</h3>
+                            <div class="b-form__el">
+                                <select class="b-form__select b-form__select_block" data-placeholder="Выберите регион">
+                                    <option class="placeholder" value="">Выберите регион</option>
+                                    <option value="">Регион 1</option>
+                                    <option value="">Регион 2</option>
+                                    <option value="">Регион 3</option>
+                                </select>
+                            </div>
+                            <h3>Безубыточная страховка</h3>
+                            <div class="b-form__el">
+                                <label class="b-form__checkbox-l"><input type="radio" name="radio" checked/>Да</label>
+                                <label class="b-form__checkbox-l"><input type="radio" name="radio"/>Нет</label>
+                            </div>
+                            <h3>Лет безубыточной страховки</h3>
+                            <div class="b-form__el">
+                                <input class="b-form__text b-form__text_block b-form__num" type="text" placeholder="Введите кол-во"/>
+                            </div>
+                        </div>
+                        <div class="span9">
+                            <div class="row">
+                                <div class="span6"><h3>Водители</h3></div>
+                                <div class="span6 align-right"><label class="b-form__checkbox-l b-drivers__unlim"><input class="js-hidedrivers" type="checkbox"/>Неограниченный список водителей</label></div>
+                            </div>
+                            <div class="b-drivers js-hidedrivers_area">
+                                <div class="row">
+                                    <div class="b-drivers__count-wrap">
+                                        <ul class="b-drivers__count">
+                                            <li class="b-drivers__icon"></li>
+                                            <li class="b-drivers__icon"></li>
+                                            <li class="b-drivers__icon"></li>
+                                            <li class="b-drivers__icon"></li>
+                                            <li class="b-drivers__icon"></li>
+                                            <li class="b-drivers__icon"></li>
+                                            <li class="b-drivers__icon"></li>
+                                            <li class="b-drivers__icon"></li>
+                                            <li class="b-drivers__icon"></li>
+                                            <li class="b-drivers__icon"></li>
+                                        </ul>
+                                        <div class="b-drivers__count-text">0 водителей</div>
+                                    </div>
+                                </div>
+                                <script class="b-drivers__template" type="text/x-jsrender">
+                                    <div class="js-drivers b-drivers__cart">
+                                        <h3>Водитель</h3>
+                                        <div class="row">
+                                            <div class="span3">
+                                                <select class="b-form__select b-form__select_block js-newstyler" data-placeholder="Возраст">
+                                                    <option class="placeholder" value="">Возраст</option>
+                                                    <option value="">меньше 18</option>
+                                                    <option value="">меньше 25</option>
+                                                    <option value="">меньше 35</option>
+                                                </select>
+                                            </div>
+                                            <div class="span3">
+                                                <select class="b-form__select b-form__select_block js-newstyler" data-placeholder="Стаж">
+                                                    <option class="placeholder" value="">Стаж</option>
+                                                    <option value="">меньше года</option>
+                                                    <option value="">меньше 5 лет</option>
+                                                    <option value="">меньше 10 лет</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </script>
+                                <div class="b-drivers__area">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Контактные данные</h3>
+                    <div class="b-form__el">
+                        <div class="row">
+                            <div class="span3"><input class="b-form__text b-form__text_block" type="text" placeholder="Имя / Фамилия"/></div>
+                            <div class="span3"><input class="b-form__text b-form__text_block" type="tel" placeholder="Телефон"/></div>
+                            <div class="span3"><input class="b-form__text b-form__text_block" type="email" placeholder="Эл.Почта"/></div>
+                            <div class="span3"><button class="pr-button pr-button_block" type="submit">Расчитать стоимость ОСАГО</button></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+@@include('blocks/_b-footer.html')

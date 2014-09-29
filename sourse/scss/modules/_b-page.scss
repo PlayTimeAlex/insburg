@@ -1,0 +1,12 @@
+.b-page{
+    padding: 0 0 em(50);
+    &_lhead{
+        margin-top: -107px;
+    }
+    &_ncontent{
+        padding-top: em(18);
+    }
+    &_calc{
+        background-color: #fefefe;
+    }
+}

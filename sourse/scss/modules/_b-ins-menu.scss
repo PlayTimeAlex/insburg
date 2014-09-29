@@ -1,0 +1,81 @@
+.b-ins-menu{
+    text-align: right;
+    padding-top: em(10);
+    &__menu{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    &__link{
+        $corners-color: #1f716d;
+        display: inline-block;
+        $background-color: #259b95;
+        background-color: $background-color;
+        $font-size: 15;
+        font-size: em($font-size);
+        font-weight: 500;
+        color: #ffffff;
+        text-decoration: none;
+        padding: em(9, $font-size) em(15, $font-size);
+        position: relative;
+        transition: background-color .3s;
+        &:before, &:after{
+            content:"";
+            position: absolute;
+            border-bottom: 7px solid $corners-color;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            bottom: -1px;
+            left: -6px;
+            z-index: 10;
+        }
+        &:after{
+            left: auto;
+            right: -6px;
+        }
+        &:hover{
+            background-color: darken($background-color, 5);
+        }
+        &:first-child{
+            padding-left: em(32, $font-size);
+            &:before{
+                border-left: 21px solid $corners-color;
+                border-top: 21px solid transparent;
+                border-bottom: 21px solid transparent;
+                left: -1px;
+            }
+            &:after{
+                border-bottom: 0;
+                border-top: 6px solid $corners-color;
+                bottom: auto;
+                top: -1px;
+            }
+        }
+        &:last-child{
+            padding-right: em(32, $font-size);
+            &:after{
+                border-right: 21px solid $corners-color;
+                border-top: 21px solid transparent;
+                border-bottom: 21px solid transparent;
+                right: -1px;
+            }
+            &:before{
+                border-bottom: 0;
+                border-top: 6px solid $corners-color;
+                bottom: auto;
+                top: -1px;
+            }
+        }
+        &.current{
+            background-color: #fff;
+            cursor: default;
+            color: #000;
+        }
+    }
+    &__title{
+        color: rgba(255,255,255, .8);
+        $font-size: 14;
+        font-size: em($font-size);
+        font-weight: 300;
+        padding-right: em(20, $font-size);
+    }
+}

@@ -1,0 +1,284 @@
+@@include('blocks/_b-header.html')
+@@include('blocks/_inneer-header.html')
+@@include('blocks/_b-pagehead-calc.html', {
+"modclass": "",
+"title": "Автострахование"
+})
+<div class="b-page b-page_ncontent b-page_calc">
+    <div class="container">
+        <div class="b-calc">
+            <div class="b-calc__header">
+                <div class="row">
+                    <div class="span4">
+                        <div class="b-calc__h-link active">
+                            <span class="name">Автомобиль</span>Характиризация автомобилья
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="b-calc__h-link i2">
+                            <span class="name">Водители</span>Перечень водителей автомобилья
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="b-calc__h-link i3">
+                            <span class="name">Условия страхования</span>Указание условии страхования
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form action="result.html">
+            <div class="b-calc__tab active">
+                <div class="row">
+                    <div class="span6">
+                        <div class="row">
+                            <div class="span6">
+                                <h3>Марка</h3>
+                                <select class="b-form__select b-form__select_block">
+                                    <option value="">Land Rover</option>
+                                    <option value="">Land Rover 2</option>
+                                    <option value="">Land Rover 3</option>
+                                    <option value="">Land Rover 4</option>
+                                </select>
+                                <h3>Мощность двигателя</h3>
+                            </div>
+                            <div class="span6">
+                                <h3>Модель</h3>
+                                <select class="b-form__select b-form__select_block">
+                                    <option value="">Range Rover Sport</option>
+                                    <option value="">Range Rover Sport</option>
+                                    <option value="">Range Rover Sport</option>
+                                    <option value="">Range Rover Sport</option>
+                                </select>
+                                <div class="b-form__rc-h3height align-right">
+                                    <label class="b-form__checkbox-l"><input type="checkbox"/>Наличие автозапуска</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="row">
+                            <div class="span3">
+                                <h3>Год выпуска</h3>
+                                <select class="b-form__select b-form__select_block">
+                                    <option value="">2008</option>
+                                    <option value="">2009</option>
+                                    <option value="">2010</option>
+                                    <option value="">2011</option>
+                                </select>
+                                <h3>Пробег</h3>
+                            </div>
+                            <div class="span9">
+                                <h3>Регион</h3>
+                                <select class="b-form__select b-form__select_block">
+                                    <option value="">Агинский Бурятский автономный округ</option>
+                                    <option value="">Агинский Бурятский автономный округ Агинский Бурятский автономный окру</option>
+                                    <option value="">Агинский Бурятский автономный округ</option>
+                                    <option value="">Агинский Бурятский автономный округ</option>
+                                </select>
+
+                                <div class="row">
+                                    <div class="span6">
+                                        <div class="b-form__rc-h3height">
+                                            <label class="b-form__checkbox-l"><input class="js-hideany" data-element="js-hidedist" type="checkbox"/>Новый автомобиль</label>
+                                        </div>
+                                    </div>
+                                    <div class="span6 align-right"><a class="b-calc__calendar-link js-calc" href="#"><input type="text" style="height: 16px; width:0px; border: 0px;" /><span class="date">Дата первой продажи</span></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="b-form__el">
+                    <div class="row">
+                        <div class="span6">
+                            <div class="pr-slider" data-min="100" data-max="1000">
+                                <div class="pr-slider__handle handle" style="min-width: 70px;"><span class="value">100</span> л.c</div>
+                                <input class="pr-slider__val" type="hidden"/>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="pr-slider js-hidedist" data-min="1000" data-max="100000">
+                                <div class="pr-slider__handle handle" style="min-width: 80px;"><span class="value">1000</span> км</div>
+                                <input class="pr-slider__val" type="hidden"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="b-form__el">
+                    <h3>Текущая стоимость<span class="pr-help js-tooltip" title="Текст подсказки"></span></h3>
+                    <div class="pr-slider" data-min="500000" data-max="100000000">
+                        <div class="pr-slider__handle handle" style="min-width: 125px;">~ <span class="value">500000</span> руб</div>
+                        <input class="pr-slider__val" type="hidden"/>
+                    </div>
+                </div>
+                <div class="b-form__el b-form__el_noh3">
+                    <div class="row">
+                        <div class="span6">
+                            <label class="b-form__checkbox-l b-form__checkbox-l_block b-form__checkbox-l_large"><input type="checkbox" class="js-hideany invert" data-element="js-autokreditbank"/>Кредитный автомобиль</label>
+                        </div>
+                        <div class="span6">
+                            <div class="js-autokreditbank" style="display:none;">
+                                <select class="b-form__select b-form__select_block">
+                                    <option value="">ОАО Транс-Кредит Банк </option>
+                                    <option value="">ОАО Транс-Кредит Банк </option>
+                                    <option value="">ОАО Транс-Кредит Банк </option>
+                                    <option value="">ОАО Транс-Кредит Банк </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="b-form__el">
+                    <label class="b-form__checkbox-l b-form__checkbox-l_large"><input type="checkbox"/>Гарантия на автомобиль</label>
+                    <label class="b-form__checkbox-l b-form__checkbox-l_large"><input type="checkbox"/>Сигнализация</label>
+                </div>
+                <div class="row">
+                    <div class="span6">
+                        <label class="b-form__checkbox-l"><input type="checkbox"/>Иммобилайзер</label>
+                        <label class="b-form__checkbox-l"><input type="checkbox"/>Механический блокиратор</label>
+                    </div>
+                    <div class="span6">
+                        <label class="b-form__checkbox-l"><input type="checkbox"/>Сигнализация</label>
+                        <label class="b-form__checkbox-l"><input type="checkbox"/>Спутниковая сигнализация</label>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="b-calc__tab">
+                <div class="form__el">
+                    <label class="b-form__checkbox-l b-drivers__unlim"><input class="js-hidedrivers" type="checkbox"/>Неограниченный список водителей</label>
+                </div>
+                <div class="b-drivers js-hidedrivers_area">
+                    <div class="row">
+                        <h3>Количество</h3>
+                        <div class="b-drivers__count-wrap">
+                            <ul class="b-drivers__count">
+                                <li class="b-drivers__icon"></li>
+                                <li class="b-drivers__icon"></li>
+                                <li class="b-drivers__icon"></li>
+                                <li class="b-drivers__icon"></li>
+                                <li class="b-drivers__icon"></li>
+                                <li class="b-drivers__icon"></li>
+                                <li class="b-drivers__icon"></li>
+                                <li class="b-drivers__icon"></li>
+                                <li class="b-drivers__icon"></li>
+                                <li class="b-drivers__icon"></li>
+                                <li class="b-drivers__icon"></li>
+                                <li class="b-drivers__icon"></li>
+                            </ul>
+                            <div class="b-drivers__count-text">0 водителей</div>
+                        </div>
+                    </div>
+                    <script class="b-drivers__template" type="text/x-jsrender">
+                        <div class="js-drivers b-drivers__cart b-drivers__cart_kasko">
+                            <h3>Водитель</h3>
+                            <div class="row">
+                                <div class="span5">
+                                    <label class="b-form__checkbox-l"><input class="js-newstyler js-sex" type="radio" name="sex_{{>key}}"/>Мужчина</label>
+                                    <label class="b-form__checkbox-l"><input class="js-newstyler js-sex" type="radio" name="sex_{{>key}}"/>Женшина</label>
+                                </div>
+                                <div class="span2">
+                                    <select class="b-form__select b-form__select_block js-newstyler" data-placeholder="Возраст">
+                                        <option class="placeholder" value="">Возраст</option>
+                                        <option value="">меньше 18</option>
+                                        <option value="">меньше 25</option>
+                                        <option value="">меньше 35</option>
+                                    </select>
+                                </div>
+                                <div class="span2">
+                                    <select class="b-form__select b-form__select_block js-newstyler" data-placeholder="Стаж">
+                                        <option class="placeholder" value="">Стаж</option>
+                                        <option value="">меньше года</option>
+                                        <option value="">меньше 5 лет</option>
+                                        <option value="">меньше 10 лет</option>
+                                    </select>
+                                </div>
+                                <div class="span3">
+                                    <select class="b-form__select b-form__select_block js-newstyler" data-placeholder="Семейное положение">
+                                        <option class="placeholder" value="">Семейное положение</option>
+                                        <option value="">женат/замужем</option>
+                                        <option value="">не женат/не замужем</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </script>
+                    <div class="b-drivers__area">
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="b-calc__tab">
+                <div class="row">
+                    <div class="span4">
+                        <h3>Тип страхования</h3>
+                        <label class="b-form__checkbox-l"><input type="radio" name="intype"/>Угон</label>
+                        <label class="b-form__checkbox-l"><input type="radio" name="intype"/>Ушерб</label>
+                        <label class="b-form__checkbox-l"><input type="radio" name="intype"/>Угон+Ушерб</label>
+                    </div>
+                    <div class="span4">
+                        <h3>Наличие безубыточной страховки</h3>
+                        <label class="b-form__checkbox-l"><input type="radio" name="infullpay"/>Да</label>
+                        <label class="b-form__checkbox-l"><input type="radio" name="infullpay"/>Нет</label>
+                    </div>
+                    <div class="span4">
+                        <h3>Текущая страховка</h3>
+                        <select class="b-form__select b-form__select_block">
+                            <option value="">АвтоСтрахИнвест</option>
+                            <option value="">АвтоСтрахИнвест</option>
+                            <option value="">АвтоСтрахИнвест</option>
+                            <option value="">АвтоСтрахИнвест</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span4">
+                        <h3>Аварийный коммисар<span class="pr-help js-tooltip" title="Текст подсказки"></span></h3>
+                        <label class="b-form__checkbox-l"><input type="radio" name="incom"/>Да</label>
+                        <label class="b-form__checkbox-l"><input type="radio" name="incom"/>Нет</label>
+                        <label class="b-form__checkbox-l"><input type="radio" name="incom"/>Не важно</label>
+                    </div>
+                    <div class="span4">
+                        <h3>Франшиза<span class="pr-help js-tooltip" title="Текст подсказки"></span></h3>
+                        <label class="b-form__checkbox-l"><input type="radio" name="infran"/>Да</label>
+                        <label class="b-form__checkbox-l"><input type="radio" name="infran"/>Нет</label>
+                        <label class="b-form__checkbox-l"><input type="radio" name="infran"/>Не важно</label>
+                    </div>
+                    <div class="span4">
+                        <h3>Оплата в рассрочку<span class="pr-help js-tooltip" title="Текст подсказки"></span></h3>
+                        <label class="b-form__checkbox-l"><input type="radio" name="incredit"/>Да</label>
+                        <label class="b-form__checkbox-l"><input type="radio" name="incredit"/>Нет</label>
+                        <label class="b-form__checkbox-l"><input type="radio" name="incredit"/>Не важно</label>
+                    </div>
+                </div>
+                <h3>Контактные данные</h3>
+                <div class="b-form__el">
+                    <div class="row">
+                        <div class="span3"><input class="b-form__text b-form__text_block" type="text" placeholder="Имя / Фамилия"/></div>
+                        <div class="span3"><input class="b-form__text b-form__text_block" type="tel" placeholder="Телефон"/></div>
+                        <div class="span3"><input class="b-form__text b-form__text_block" type="email" placeholder="Эл.Почта"/></div>
+                    </div>
+                </div>
+                <div class="b-calc__submit">
+                    <button class="pr-button pr-button_large" type="submit">Расчитать стоимость ОСАГО</button>
+                </div>
+            </div>
+            <div class="b-calc__bottom">
+                <div class="row">
+                    <div class="span6">
+                        <button type="button" class="b-calc__prev" style="display:none;">Вернуться на шаг назад</button>
+                    </div>
+                    <div class="span6 align-right">
+                        <button type="button" class="b-calc__next">Следующий шаг</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+@@include('blocks/_b-footer.html')
