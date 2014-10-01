@@ -1,0 +1,22 @@
+.b-steps{
+    padding: em(20) 0 em(50);
+    background: url(../images/steps_bg.png) no-repeat left top;
+    &__item{
+        text-align: center;
+        padding: em(35) 0;
+        img{
+            display: block;
+            margin: 0 auto em(10);
+        }
+    }
+    &__bottom{
+        .dec{
+            color: #21b5a9;
+        }
+    }
+}
+@media (max-width:1450px){
+    .b-steps{
+        background-position: -250px 0;
+    }
+}

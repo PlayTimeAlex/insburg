@@ -17,6 +17,7 @@
 300
 400
 500
+700
 */
 
 @import "modules/base";
@@ -28,6 +29,9 @@
 }
 .align-right{
     text-align: right;
+}
+.align-center{
+    text-align: center
 }
 .body_inner{
     background-color: #f1f2f5;
@@ -82,3 +86,5 @@
 @import "modules/b-calc";
 @import "modules/b-result";
 @import "modules/ui";
+@import "modules/b-lend";
+@import "modules/b-steps";

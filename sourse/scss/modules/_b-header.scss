@@ -53,10 +53,26 @@
     &_home{
         background: url(../images/promo-bg.jpg) no-repeat center top #eceef2;
     }
-    &_home &__top{
+    &_home &__top, &_lend &__top{
         background-color: #ffffff;
     }
-    &_home &__bottom{
+    &_home &__bottom, &_lend &__bottom{
         background-color: transparent;
+    }
+    &_lend{
+        background: url(../images/lend1.jpg) no-repeat center top #eceef2;
+        background-size: cover;
+        .b-promo{
+            &:after{
+                content:"";
+                display: block;
+                position: absolute;
+                width: 100%;
+                left: 0;
+                height: 13px;
+                background: url(../images/b-features__border.png) repeat-x center 0;
+                bottom: 0;
+            }
+        }
     }
 }
