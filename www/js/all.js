@@ -10435,8 +10435,15 @@ var tooltip = $.widget( "ui.tooltip", {
                 }
             });
 
-            $('.'+id).blur(function(){
-                obj[id].setValue(($(this).val() - min ) / (max - min), '', true);
+            $('.'+id).keyup(function(){
+                var val = $(this).val();
+                if(val < min){
+                    obj[id].setValue(0, '', true);
+                } else if (val > max) {
+                    obj[id].setValue(1, '', true);
+                } else {
+                    obj[id].setValue(($(this).val() - min ) / (max - min), '', true);
+                }
             });
 
         });
