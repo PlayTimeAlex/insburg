@@ -10334,6 +10334,19 @@ var tooltip = $.widget( "ui.tooltip", {
 })(this, this.jQuery);
 (function($) {
     $(document).ready(function(){
+        //number filter
+        $("body" ).on( "keydown", ".only-num", function(event) {
+            if ( $.inArray(event.keyCode,[46,8,9,27,13]) !== -1 ||
+                (event.keyCode == 65 && event.ctrlKey === true) ||
+                (event.keyCode >= 35 && event.keyCode <= 39)) {
+                return;
+            } else {
+                if (event.shiftKey || (event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105 )) {
+                    event.preventDefault();
+                }
+            }
+        });
+
         $('input, select').styler({
             selectSearch: false
         });
@@ -10404,8 +10417,6 @@ var tooltip = $.widget( "ui.tooltip", {
         /*
         * Slider
         * */
-
-var testet
         $(".pr-slider").each(function(){
             var min = ($(this).data('min') ===  'undefined') ? 0 : parseInt($(this).data('min'));
             var max = ($(this).data('max') ===  'undefined') ? 0 : parseInt($(this).data('max'));
@@ -10425,8 +10436,7 @@ var testet
             });
 
             $('.'+id).blur(function(){
-                obj[id].setValue(($(this).val()-min)/max, '', true);
-                //$('#'+id).find('.value').text($(this).val());
+                obj[id].setValue(($(this).val() - min ) / (max - min), '', true);
             });
 
         });
