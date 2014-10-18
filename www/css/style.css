@@ -978,6 +978,12 @@ h3 {
 .b-form__select_block.jq-selectbox {
   width: 100%;
   display: block !important; }
+.b-form__helper {
+  display: inline_block;
+  font-size: 1.4em;
+  padding: 0.71429em 0; }
+  .b-form__helper_block {
+    display: block; }
 .b-form__rc-h3height {
   padding: 2.1em 0 1em; }
 

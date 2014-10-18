@@ -10404,19 +10404,34 @@ var tooltip = $.widget( "ui.tooltip", {
         /*
         * Slider
         * */
+
+var testet
         $(".pr-slider").each(function(){
             var min = ($(this).data('min') ===  'undefined') ? 0 : parseInt($(this).data('min'));
             var max = ($(this).data('max') ===  'undefined') ? 0 : parseInt($(this).data('max'));
             var field = $(".pr-slider__val", this);
+            var id = $(this).attr('id');
+            var obj = {};
 
-            new Dragdealer($(this)[0], {
+            obj[id] = new Dragdealer($(this)[0], {
+                slide: false,
                 animationCallback: function(x, y) {
                     var val = Math.round(min + x*(max-min));
                     $(this.handle).find('.value').text(val);
                     field.val(val);
+                    $('.'+id).val(val);
+
                 }
             });
+
+            $('.'+id).blur(function(){
+                obj[id].setValue(($(this).val()-min)/max, '', true);
+                //$('#'+id).find('.value').text($(this).val());
+            });
+
         });
+
+
 
         /*
         * выбор количества водителей

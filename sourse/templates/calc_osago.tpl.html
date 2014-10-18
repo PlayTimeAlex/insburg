@@ -9,9 +9,19 @@
                 <form action="result.html">
                     <h3>Мощность (л.с.)<span class="pr-help js-tooltip" title="Текст подсказки"></span></h3>
                     <div class="b-form__el">
-                        <div class="pr-slider" data-min="100" data-max="1000">
-                            <div class="pr-slider__handle handle" style="min-width: 70px;"><span class="value">100</span> л.c</div>
-                            <input class="pr-slider__val" type="hidden"/>
+                        <div class="row">
+                            <div class="span8">
+                                <div class="pr-slider" data-min="100" data-max="1000" id="js-slider-hp">
+                                    <div class="pr-slider__handle handle" style="min-width: 70px;"><span class="value">100</span> л.c</div>
+                                    <input class="pr-slider__val" type="hidden"/>
+                                </div>
+                            </div>
+                            <div class="span2">
+                                <input class="b-form__text b-form__text_block js-slider-hp" type="number" min="1" max="1000"/>
+                            </div>
+                            <div class="span2">
+                                <span class="b-form__helper b-form__helper_block">л.c</span>
+                            </div>
                         </div>
                     </div>
                     <div class="row">

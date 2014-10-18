@@ -40,7 +40,6 @@
                                     <option value="">Land Rover 3</option>
                                     <option value="">Land Rover 4</option>
                                 </select>
-                                <h3>Мощность двигателя</h3>
                             </div>
                             <div class="span6">
                                 <h3>Модель</h3>
@@ -50,9 +49,6 @@
                                     <option value="">Range Rover Sport</option>
                                     <option value="">Range Rover Sport</option>
                                 </select>
-                                <div class="b-form__rc-h3height align-right">
-                                    <label class="b-form__checkbox-l"><input type="checkbox"/>Наличие автозапуска</label>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -66,7 +62,6 @@
                                     <option value="">2010</option>
                                     <option value="">2011</option>
                                 </select>
-                                <h3>Пробег</h3>
                             </div>
                             <div class="span9">
                                 <h3>Регион</h3>
@@ -76,40 +71,88 @@
                                     <option value="">Агинский Бурятский автономный округ</option>
                                     <option value="">Агинский Бурятский автономный округ</option>
                                 </select>
-
-                                <div class="row">
-                                    <div class="span6">
-                                        <div class="b-form__rc-h3height">
-                                            <label class="b-form__checkbox-l"><input class="js-hideany" data-element="js-hidedist" type="checkbox"/>Новый автомобиль</label>
-                                        </div>
-                                    </div>
-                                    <div class="span6 align-right"><a class="b-calc__calendar-link js-calc" href="#"><input type="text" style="height: 16px; width:0px; border: 0px;" /><span class="date">Дата первой продажи</span></a></div>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="b-form__el">
                     <div class="row">
-                        <div class="span6">
-                            <div class="pr-slider" data-min="100" data-max="1000">
+                        <div class="span7">
+                            <div class="row">
+                                <div class="span6">
+                                    <h3>Мощность двигателя</h3>
+                                </div>
+                                <div class="span6">
+                                    <div class="b-form__rc-h3height align-right">
+                                        <label class="b-form__checkbox-l"><input type="checkbox"/>Наличие автозапуска</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span8">
+                            <div class="pr-slider" data-min="1" data-max="1000" id="js-slider-hp">
                                 <div class="pr-slider__handle handle" style="min-width: 70px;"><span class="value">100</span> л.c</div>
                                 <input class="pr-slider__val" type="hidden"/>
                             </div>
                         </div>
-                        <div class="span6">
-                            <div class="pr-slider js-hidedist" data-min="1000" data-max="100000">
-                                <div class="pr-slider__handle handle" style="min-width: 80px;"><span class="value">1000</span> км</div>
-                                <input class="pr-slider__val" type="hidden"/>
-                            </div>
+                        <div class="span2">
+                            <input class="b-form__text b-form__text_block js-slider-hp" type="number" min="1" max="1000"/>
+                        </div>
+                        <div class="span2">
+                            <span class="b-form__helper b-form__helper_block">л.c</span>
                         </div>
                     </div>
                 </div>
                 <div class="b-form__el">
-                    <h3>Текущая стоимость<span class="pr-help js-tooltip" title="Текст подсказки"></span></h3>
-                    <div class="pr-slider" data-min="500000" data-max="100000000">
-                        <div class="pr-slider__handle handle" style="min-width: 125px;">~ <span class="value">500000</span> руб</div>
-                        <input class="pr-slider__val" type="hidden"/>
+                    <div class="row">
+                        <div class="span7">
+                            <div class="row">
+                                <div class="span3"><h3>Пробег</h3></div>
+                                <div class="span5">
+                                    <div class="b-form__rc-h3height">
+                                        <label class="b-form__checkbox-l"><input class="js-hideany" data-element="js-hidedist" type="checkbox"/>Новый автомобиль</label>
+                                    </div>
+                                </div>
+                                <div class="span4 align-right"><a class="b-calc__calendar-link js-calc" href="#"><input type="text" style="height: 16px; width:0px; border: 0px;" /><span class="date">Дата первой продажи</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span8">
+                            <div class="pr-slider js-hidedist" data-min="1000" data-max="100000" id="js-slider-mileage">
+                                <div class="pr-slider__handle handle" style="min-width: 80px;"><span class="value">1000</span> км</div>
+                                <input class="pr-slider__val" type="hidden"/>
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <input class="b-form__text b-form__text_block js-slider-mileage" type="number" min="0" max="100000"/>
+                        </div>
+                        <div class="span2">
+                            <span class="b-form__helper b-form__helper_block">км</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="b-form__el">
+                    <div class="row">
+                        <div class="span7">
+                            <h3>Текущая стоимость<span class="pr-help js-tooltip" title="Текст подсказки"></span></h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span8">
+                            <div class="pr-slider" data-min="500000" data-max="100000000" id="js-slider-price">
+                                <div class="pr-slider__handle handle" style="min-width: 125px;">~ <span class="value">500000</span> руб</div>
+                                <input class="pr-slider__val" type="hidden"/>
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <input class="b-form__text b-form__text_block js-slider-price" type="number" min="500000" max="100000000"/>
+                        </div>
+                        <div class="span2">
+                            <span class="b-form__helper b-form__helper_block">руб</span>
+                        </div>
                     </div>
                 </div>
                 <div class="b-form__el b-form__el_noh3">

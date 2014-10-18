@@ -176,6 +176,15 @@
             }
         }
     }
+    &__helper{
+        display: inline_block;
+        $font-size: 14;
+        font-size: em($font-size);
+        padding: em(10, $font-size) 0;
+        &_block{
+            display: block;
+        }
+    }
     &__rc-h3height{
         padding: em(21) 0 em(10);
     }
