@@ -7028,7 +7028,7 @@ var tooltip = $.widget( "ui.tooltip", {
 			idSuffix: '-styler',
 			filePlaceholder: 'Файл не выбран',
 			fileBrowse: 'Обзор...',
-			selectPlaceholder: 'Выберите...',
+            selectPlaceholder: 'Выберите...',
 			selectSearch: false,
 			selectSearchLimit: 10,
 			selectSearchNotFound: 'Совпадений не найдено',
@@ -8645,6 +8645,17 @@ var tooltip = $.widget( "ui.tooltip", {
 
 })(jQuery);
 
+(function($){
+
+    $.fn.sendkeys = function (x){
+        x = x.replace(/([^{])\n/g, '$1{enter}'); // turn line feeds into explicit break insertions, but not if escaped
+        return this.each( function(){
+            bililiteRange(this).bounds('selection').sendkeys(x).select();
+        });
+    }; // sendkeys
+
+
+})(jQuery);
 /*! JsRender v1.0.0-beta: http://github.com/BorisMoore/jsrender and http://jsviews.com/jsviews
  informal pre V1.0 commit counter: 56 */
 /*
@@ -10435,7 +10446,8 @@ var tooltip = $.widget( "ui.tooltip", {
                 }
             });
 
-            $('.'+id).keyup(function(){
+            $('.'+id).on('change keyup', function(event){
+                if(event.keyCode == 8 || event.keyCode == 46) return;
                 var val = $(this).val();
                 if(val < min){
                     obj[id].setValue(0, '', true);
@@ -10444,8 +10456,8 @@ var tooltip = $.widget( "ui.tooltip", {
                 } else {
                     obj[id].setValue(($(this).val() - min ) / (max - min), '', true);
                 }
+                obj[id].reflow();
             });
-
         });
 
 
@@ -10493,6 +10505,11 @@ var tooltip = $.widget( "ui.tooltip", {
                     }]));
                 }
                 $(cblock).find('.js-newstyler').removeClass('js-newstyler').styler();
+                if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                    $('.js-mousenum', cblock).each(function () {
+                        addNumPad($(this));
+                    });
+                }
             } else if(drivers.length == el_index + 1){
                 return;
             } else {
@@ -10524,6 +10541,20 @@ var tooltip = $.widget( "ui.tooltip", {
                 } else {
                     $('.'+$(this).data('element')).show('fast');
                 }
+            }
+        });
+
+        /*скрывание выбраного элеемнта в зависимости от состояния радиокнопки
+        * Отдельно сделано из расчета на то что возможно будет нужно изменить алгоритм для радиокнопок(например их будет 3-4)
+        * */
+
+        $('body').on('change', '.js-hideany[type="radio"]', function(){
+            var elm = $('.js-'+$(this).attr('name'));
+            if($(this).data('element') == "" || $(this).data('element') == "undefined"){
+                elm.stop().hide('fast');
+            } else {
+                elm.stop().hide('fast');
+                $('.'+$(this).data('element')).stop().show('fast');
             }
         });
 
@@ -10620,7 +10651,6 @@ var tooltip = $.widget( "ui.tooltip", {
         });
         $(".js-calc").click(function() {
             $("input", this).datepicker("show");
-            console.log('test');
             return false;
         });
 
@@ -10637,7 +10667,51 @@ var tooltip = $.widget( "ui.tooltip", {
             return titles[ (number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5] ];
         }
 
-
+        //цифровая клавиатура
+        if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            $('.js-mousenum').each(function () {
+                addNumPad($(this));
+            });
+            $(document).on('focus', '.js-mousenum', function () {
+                var elem = $(this);
+                $('.b-mousenum').stop().hide(0, function () {
+                    var parent = elem.closest('.b-mousenum__wrap');
+                    $('.b-mousenum', parent).stop().show(0);
+                });
+                console.log('focus');
+            });
+            $(document).on('click', 'td', '.b-mousenum__table', function () {
+                var parent = $(this).closest('.b-mousenum__wrap');
+                var input = parent.children('input'),
+                    key = $(this).data('key'),
+                    val = input.val();
+                if (key == '8') {
+                    input.val(val.substring(0, val.length - 1));
+                    input.focus();
+                } else if (key == 'close') {
+                    $('.b-mousenum', parent).stop().hide(0);
+                } else {
+                    input.val(val + String.fromCharCode($(this).data('key')));
+                    input.focus();
+                }
+            });
+            $(document).click(function () {
+                $(".b-mousenum").stop().hide(0);
+            });
+            $(document).on('click', '.b-mousenum, .js-mousenum', function (event) {
+                event.stopPropagation();
+            });
+        }
+        /*
+        * Добавлет цифровую клавиатуру к выбраному полю
+        *
+        * @param {obj} - jquery объкт поля.
+        * */
+        function addNumPad(elem){
+            var numpad = '<div class="b-mousenum" style="display: none;"><table class="b-mousenum__table"><tr><td data-key="55">7</td><td data-key="56">8</td><td data-key="57">9</td></tr><tr><td data-key="52">4</td><td data-key="53">5</td><td data-key="54">6</td></tr><tr><td data-key="49">1</td><td data-key="50">2</td><td data-key="51">3</td></tr><tr><td class="backspace" data-key="8"><span class="arrow">Стереть</span></td><td data-key="48">0</td><td  class="close" data-key="close"><span class="arrow right">Далее</span></td></tr></table></div>';
+            elem.wrap('<div class="b-mousenum__wrap"></div><div>');
+            elem.parent().append(numpad);
+        }
     });
 
     $(window).load(function() {

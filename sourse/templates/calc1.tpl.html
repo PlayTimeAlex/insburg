@@ -44,10 +44,10 @@
                             <div class="span6">
                                 <h3>Модель</h3>
                                 <select class="b-form__select b-form__select_block">
-                                    <option value="">Range Rover Sport</option>
-                                    <option value="">Range Rover Sport</option>
-                                    <option value="">Range Rover Sport</option>
-                                    <option value="">Range Rover Sport</option>
+                                    <option value="" data-max="10" data-min="500">Range Rover Sport</option>
+                                    <option value="" data-max="100" data-min="5000">Range Rover Sport</option>
+                                    <option value="" data-max="4" data-min="50">Range Rover Sport</option>
+                                    <option value="" data-max="15" data-min="150">Range Rover Sport</option>
                                 </select>
                             </div>
                         </div>
@@ -162,7 +162,7 @@
                         </div>
                         <div class="span6">
                             <div class="js-autokreditbank" style="display:none;">
-                                <select class="b-form__select b-form__select_block">
+                                <select class="b-form__select b-form__select_block" data-placeholder="Выберите банк">
                                     <option value="">ОАО Транс-Кредит Банк </option>
                                     <option value="">ОАО Транс-Кредит Банк </option>
                                     <option value="">ОАО Транс-Кредит Банк </option>
@@ -174,16 +174,26 @@
                 </div>
                 <div class="b-form__el">
                     <label class="b-form__checkbox-l b-form__checkbox-l_large"><input type="checkbox"/>Гарантия на автомобиль</label>
-                    <label class="b-form__checkbox-l b-form__checkbox-l_large"><input type="checkbox"/>Сигнализация</label>
                 </div>
-                <div class="row">
-                    <div class="span6">
-                        <label class="b-form__checkbox-l"><input type="checkbox"/>Иммобилайзер</label>
-                        <label class="b-form__checkbox-l"><input type="checkbox"/>Механический блокиратор</label>
-                    </div>
-                    <div class="span6">
-                        <label class="b-form__checkbox-l"><input type="checkbox"/>Сигнализация</label>
-                        <label class="b-form__checkbox-l"><input type="checkbox"/>Спутниковая сигнализация</label>
+                <div class="b-form__el">
+                    <label class="b-form__checkbox-l b-form__checkbox-l_large"><input class="js-hideany invert"  data-element="js-signaling" type="checkbox"/>Сигнализация</label>
+                </div>
+                <div class="js-signaling" style="display:none;">
+                    <label class="b-form__checkbox-l"><input type="checkbox"/>Иммобилайзер</label>
+                    <label class="b-form__checkbox-l"><input type="checkbox"/>Механический блокиратор</label>
+
+                    <div class="row">
+                        <div class="span6"><label class="b-form__checkbox-l"><input class="js-hideany invert" data-element="js-signaling_man" type="checkbox"/>Спутниковая сигнализация</label></div>
+                        <div class="span4">
+                            <div class="js-signaling_man" style="display:none;" >
+                                <select class="b-form__select b-form__select_block" data-placeholder="Выберите производителя">
+                                    <option value="">Производитель 1</option>
+                                    <option value="">Производитель 2</option>
+                                    <option value="">Производитель 3</option>
+                                    <option value="">Производитель 4</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -224,20 +234,10 @@
                                     <label class="b-form__checkbox-l"><input class="js-newstyler js-sex" type="radio" name="sex_{{>key}}"/>Женшина</label>
                                 </div>
                                 <div class="span2">
-                                    <select class="b-form__select b-form__select_block js-newstyler" data-placeholder="Возраст">
-                                        <option class="placeholder" value="">Возраст</option>
-                                        <option value="">меньше 18</option>
-                                        <option value="">меньше 25</option>
-                                        <option value="">меньше 35</option>
-                                    </select>
+                                    <input class="b-form__text b-form__text_block b-form__num js-mousenum" type="number" placeholder="Возраст"/>
                                 </div>
                                 <div class="span2">
-                                    <select class="b-form__select b-form__select_block js-newstyler" data-placeholder="Стаж">
-                                        <option class="placeholder" value="">Стаж</option>
-                                        <option value="">меньше года</option>
-                                        <option value="">меньше 5 лет</option>
-                                        <option value="">меньше 10 лет</option>
-                                    </select>
+                                    <input class="b-form__text b-form__text_block b-form__num js-mousenum" type="number" placeholder="Стаж"/>
                                 </div>
                                 <div class="span3">
                                     <select class="b-form__select b-form__select_block js-newstyler" data-placeholder="Семейное положение">
@@ -261,8 +261,8 @@
                     <div class="span4">
                         <h3>Тип страхования</h3>
                         <label class="b-form__checkbox-l"><input type="radio" name="intype"/>Угон</label>
-                        <label class="b-form__checkbox-l"><input type="radio" name="intype"/>Ушерб</label>
-                        <label class="b-form__checkbox-l"><input type="radio" name="intype"/>Угон+Ушерб</label>
+                        <label class="b-form__checkbox-l"><input type="radio" name="intype"/>Ущерб</label>
+                        <label class="b-form__checkbox-l"><input type="radio" name="intype"/>Угон+Ущерб</label>
                     </div>
                     <div class="span4">
                         <h3>Наличие безубыточной страховки</h3>
@@ -281,7 +281,7 @@
                 </div>
                 <div class="row">
                     <div class="span4">
-                        <h3>Аварийный коммисар<span class="pr-help js-tooltip" title="Текст подсказки"></span></h3>
+                        <h3>Аварийный комиссар<span class="pr-help js-tooltip" title="Текст подсказки"></span></h3>
                         <label class="b-form__checkbox-l"><input type="radio" name="incom"/>Да</label>
                         <label class="b-form__checkbox-l"><input type="radio" name="incom"/>Нет</label>
                         <label class="b-form__checkbox-l"><input type="radio" name="incom"/>Не важно</label>
@@ -308,7 +308,7 @@
                     </div>
                 </div>
                 <div class="b-calc__submit">
-                    <button class="pr-button pr-button_large" type="submit">Расчитать стоимость ОСАГО</button>
+                    <button class="pr-button pr-button_large" type="submit">Расчитать стоимость КАСКО</button>
                 </div>
             </div>
             <div class="b-calc__bottom">

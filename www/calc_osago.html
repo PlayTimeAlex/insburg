@@ -51,7 +51,7 @@
                         <li class="b-breadcrumb__item"><a class="b-breadcrumb__link" href="index.html">Главная</a></li>
                     </ul>
                 </div>
-                <h1 class="b-pagehead__title">Калькулятор</h1>
+                <h1 class="b-pagehead__title">Автострахование</h1>
             </div>
             <div class="span7">
                 <div class="b-ins-menu">
@@ -95,12 +95,14 @@
                             </div>
                             <h3>Безубыточная страховка</h3>
                             <div class="b-form__el">
-                                <label class="b-form__checkbox-l"><input type="radio" name="radio" checked/>Да</label>
-                                <label class="b-form__checkbox-l"><input type="radio" name="radio"/>Нет</label>
+                                <label class="b-form__checkbox-l"><input class="js-hideany" data-element="js-fullinsurance" type="radio" name="fullinsurance"/>Да</label>
+                                <label class="b-form__checkbox-l"><input class="js-hideany" type="radio" name="fullinsurance" checked/>Нет</label>
                             </div>
-                            <h3>Лет безубыточной страховки</h3>
-                            <div class="b-form__el">
-                                <input class="b-form__text b-form__text_block b-form__num" type="text" placeholder="Введите кол-во"/>
+                            <div class="js-fullinsurance" style="display:none;">
+                                <h3>Лет безубыточной страховки</h3>
+                                <div class="b-form__el">
+                                    <input class="b-form__text b-form__text_block b-form__num js-mousenum" type="text" placeholder="Введите кол-во"/>
+                                </div>
                             </div>
                         </div>
                         <div class="span9">
@@ -131,20 +133,10 @@
                                         <h3>Водитель</h3>
                                         <div class="row">
                                             <div class="span3">
-                                                <select class="b-form__select b-form__select_block js-newstyler" data-placeholder="Возраст">
-                                                    <option class="placeholder" value="">Возраст</option>
-                                                    <option value="">меньше 18</option>
-                                                    <option value="">меньше 25</option>
-                                                    <option value="">меньше 35</option>
-                                                </select>
+                                                <input class="b-form__text b-form__text_block b-form__num js-mousenum" type="number" placeholder="Возраст"/>
                                             </div>
                                             <div class="span3">
-                                                <select class="b-form__select b-form__select_block js-newstyler" data-placeholder="Стаж">
-                                                    <option class="placeholder" value="">Стаж</option>
-                                                    <option value="">меньше года</option>
-                                                    <option value="">меньше 5 лет</option>
-                                                    <option value="">меньше 10 лет</option>
-                                                </select>
+                                                <input class="b-form__text b-form__text_block b-form__num js-mousenum" type="number" placeholder="Стаж"/>
                                             </div>
                                         </div>
                                     </div>
@@ -178,7 +170,7 @@
                         </div>
                     </div>
                     <div class="span4">
-                        <div class="b-footer__nav"><a href="#">О нас</a><a href="#">Контакты</a><a href="#">Правовая информация</a></div>
+                        <div class="b-footer__nav"><a href="text.html">О нас</a><a href="#">Контакты</a><a href="text.html">Правовая информация</a></div>
                     </div>
                     <div class="span4">
                         <div class="b-created">

@@ -63,7 +63,7 @@
 .ui-helper-hidden-accessible{
     display: none;
 }
-
+input::-ms-clear { display: none; }
 
 @import "modules/pr";
 @import "modules/b-header";
@@ -88,3 +88,4 @@
 @import "modules/ui";
 @import "modules/b-lend";
 @import "modules/b-steps";
+@import "modules/b-mousenum";

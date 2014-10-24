@@ -212,4 +212,7 @@
             background-color: darken($background-color, 10);
         }
     }
+    &__aclink{
+        display: block;
+    }
 }
