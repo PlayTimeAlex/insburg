@@ -103,8 +103,11 @@
 							});
 							// клик на label
 							el.closest('label').add('label[for="' + el.attr('id') + '"]').click(function(e) {
-								checkbox.click();
-								e.preventDefault();
+								var target = $( e.target );
+								if (!target.is("a")) {
+									checkbox.click();
+									e.preventDefault();
+								}
 							});
 							// переключение по Space или Enter
 							el.on('change.styler', function() {
