@@ -68,3 +68,9 @@
     border:3px solid #5bd5e7;
     opacity: 0;
 }
+
+@media (max-width: $base__size_xs - 1 * 1px) {
+    #cboxContent{
+        padding:em(10);
+    }
+}

@@ -33,6 +33,10 @@
     }
     &__content{
         width: 343px;
+        max-width: 100%;
+        &_wide{
+            width: 513px;
+        }
     }
     &__l-block{
         width: 513px;
@@ -41,6 +45,7 @@
         margin-top: em(185);
         box-sizing: border-box;
         padding: em(63) em(26) 0;
+        max-width: 100%;
     }
     &__breadcrumb-item{
         color: rgba(0,0,0,.4);
@@ -87,7 +92,7 @@
         }
     }
     &_sa{
-        background: url(../images/content/lend2.jpg) no-repeat center top;
+        background: url(../images/content/lend1.jpg) no-repeat center top;
         background-size: cover;
         padding-top: em(145);
         position: relative;
@@ -107,5 +112,27 @@
     }
     &_sa &__l-block{
         padding-top: em(70);
+    }
+}
+
+@media (max-width: $base__size_md - 1 * 1px) {
+    .b-promo {
+        padding: em(70) 0 em(22);
+
+        &__l-block{
+            margin-top: em(0);
+        }
+    }
+}
+@media (max-width: $base__size_sm - 1 * 1px) {
+    .b-promo {
+        &__l-block{
+            margin-top: em(0);
+            background-image: none;
+            background-color: #eceef2;
+            padding-top: em(33);
+            padding-bottom: em(20);
+            height: auto;
+        }
     }
 }

@@ -118,3 +118,17 @@
         }
     }
 }
+
+@media (max-width: $base__size_md - 1 * 1px) {
+    .b-features {
+        &__item{
+            padding: em(15) 0 em(15) em(60);
+        }
+        &_lend &__item {
+            padding: em(50) 0 em(0) 0;
+        }
+        &_lend{
+            background-image: none;
+        }
+    }
+}

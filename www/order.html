@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html>
+    <html>
     <head>
         <title>Index</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=1012">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
         <link rel="stylesheet" href="css/style.min.css" media="all"/>
         <script src="js/all.min.js"></script>
         <!--[if lte IE 8 ]><script type="text/javascript">window.location.href="ie8min/index.html";</script><![endif]-->
     </head>
+
+
 <body class="body_inner">
 <header class="b-header">
     <div class="b-header__top">
@@ -18,17 +20,23 @@
                     <img src="images/headerlogo.png" alt="Insburg - Ваш страховой агент"/>
                 </a>
                 <div class="row">
-                    <div class="span3">
+                    <div class="col-xs-3 col-sm-6 col-md-3 hidden-sm hidden-xs">
                         Страховка за <span class="black">2 минуты</span>
                     </div>
-                    <div class="span5">
+                    <div class="col-xs-5 hidden-sm hidden-xs">
                         Мы в социальных сетях: <a class="pr-social" href="#vk"></a><a class="pr-social pr-social_fb" href="#fb"></a><a
-                            class="pr-social pr-social_tw" href="#twitter"></a>
+                        class="pr-social pr-social_tw" href="#twitter"></a>
                     </div>
-                    <div class="span4 align-right">
-                        Горячая линия: <span class="black">+7 (495) 123-456</span>
+                    <div class="col-xs-12 col-sm-6 col-md-4 align-right">
+                        <span class="hidden-xs">Горячая линия: </span><span class="black">+7 (495) 123-456</span>
                     </div>
                 </div>
+            </div>
+            <button class="b-header__nav-open"></button>
+            <div class="b-header__mob-nav">
+                <a class="b-header__mob-nav-link current" href="index.html">Главная</a>
+                <a class="b-header__mob-nav-link" href="avtostraxf.html">Автострахование</a>
+                <a class="b-header__mob-nav-link" href="catalog.html">Страховые компании</a>
             </div>
         </div>
     </div>
@@ -57,7 +65,13 @@
         <div class="b-order">
             <form action="/">
                 <div class="row">
-                    <div class="span4">
+                    <div class="col-xs-12 visible-xs b-text">
+                        <div class="b-order__description">
+                            <img class="b-order__logo" src="images/content/logo1.png" alt=""/>
+                            <p><a class="open-popup b-order__c-link" href="#ordercart">Карточка страховой компании</a></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
                         <div class="b-order__detalis">
                             <span class="b-order__sname">Страховая компания</span>
                             <span class="b-order__sval">ЕРГО Русь</span>
@@ -73,7 +87,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="span3">
+                    <div class="col-xs-12 col-sm-3">
                         <h3>Контактные Данные</h3>
                         <div class="b-form__el">
                             <input class="b-form__text b-form__text_block" type="text" placeholder="Ваше имя:"/>
@@ -91,13 +105,11 @@
                             <input class="b-form__text b-form__text_block" type="tel" placeholder="Код безопасности"/>
                         </div>
                     </div>
-                    <div class="span4 offset1 b-text">
+                    <div class="col-xs-12 col-sm-4 col-sm-offset-1 hidden-xs b-text">
                         <div class="b-order__description">
                             <img class="b-order__logo" src="images/content/logo1.png" alt=""/>
-                            <p>Группа ERGO предлагает широкую линию продуктов по страхованию и пенсионному обеспечению.</p>
-                            <p>Более 40 млн клиентов доверяют защите, опыту и поддержке, предоставляемой ERGO и ее экспертами по разным линиям бизнеса. </p>
                             <p><a class="open-popup b-order__c-link" href="#ordercart">Карточка страховой компании</a></p>
-                            <p><a class="pr-button pr-button_block pr-button_large" href="#">Оформить страховку</a></p>
+                            <p><a class="pr-button pr-button_block pr-button_blue pr-button_large" href="#">Оформить страховку</a></p>
                         </div>
                     </div>
                 </div>
@@ -114,43 +126,48 @@
                     <li>Ремонт без справок 1 раз</li>
                 </ul>
             </div>
+            <div class="visible-xs b-text">
+                <p><a class="pr-button pr-button_block pr-button_blue pr-button_large" href="#">Оформить страховку</a></p>
+            </div>
         </div>
     </div>
 </div>
 <div style="display:none;">
     <div  id="ordercart">
-        <h2 class="b-popup__title">ERGO Русь</h2>
-        <div class="row b-order__cdetalis">
-            <div class="span4"><img src="images/content/logo1.png" alt="Ergo русь"/></div>
-            <div class="span4">
-                <span class="title">Рейтинг Insburg<span class="pr-help js-tooltip" title="Текст подсказки"></span></span>
-                <div data-ro="1" data-score="3" class="pr-rating b-order__rating"></div>
+        <div class="container">
+            <h2 class="b-popup__title">ERGO Русь</h2>
+            <div class="row b-order__cdetalis">
+                <div class="col-xs-12 col-sm-4"><img src="images/content/logo1.png" alt="Ergo русь"/></div>
+                <div class="col-xs-12 col-sm-4">
+                    <span class="title">Рейтинг Insburg<span class="pr-help js-tooltip" title="Текст подсказки"></span></span>
+                    <div data-ro="1" data-score="3" class="pr-rating b-order__rating"></div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <span class="title">Рейтинг Экспертов<span class="pr-help js-tooltip" title="Текст подсказки"></span></span>
+                    <div data-ro="1" data-score="3" class="pr-rating b-order__rating"></div>
+                </div>
             </div>
-            <div class="span4">
-                <span class="title">Рейтинг Экспертов<span class="pr-help js-tooltip" title="Текст подсказки"></span></span>
-                <div data-ro="1" data-score="3" class="pr-rating b-order__rating"></div>
+            <div class="b-text">
+                <p>Группа ERGO – одна из крупнейших страховых групп в Германии и Европе. Ежегодные страховые сборы группы превышают €20 млрд.</p>
+                <p>ERGO представлен более чем в 30 странах, фокусируется на рынках Европы и Азии. В Германии ERGO занимает лидирующие позиции на всех сегментах страхового рынка. В группе ERGO работает более 50 тыс. человек, включая штатных сотрудников и внештатных страховых агентов.
+                </p>
             </div>
-        </div>
-        <div class="b-text">
-            <p>Группа ERGO – одна из крупнейших страховых групп в Германии и Европе. Ежегодные страховые сборы группы превышают €20 млрд.</p>
-            <p>ERGO представлен более чем в 30 странах, фокусируется на рынках Европы и Азии. В Германии ERGO занимает лидирующие позиции на всех сегментах страхового рынка. В группе ERGO работает более 50 тыс. человек, включая штатных сотрудников и внештатных страховых агентов.
-            </p>
         </div>
     </div>
 </div>
         <footer class="b-footer">
             <div class="container">
                 <div class="row">
-                    <div class="span4">
+                    <div class="col-md-4 col-xs-12 col-sm-6">
                         <div class="b-footer__logo">
                             Insburg.ru<br />
                             Все права защишенны
                         </div>
                     </div>
-                    <div class="span4">
+                    <div class="col-md-4 col-xs-12 col-sm-6">
                         <div class="b-footer__nav"><a href="text.html">О нас</a><a href="#">Контакты</a><a href="text.html">Правовая информация</a></div>
                     </div>
-                    <div class="span4">
+                    <div class="col-md-4 col-xs-12">
                         <div class="b-created">
                             <a class="b-created__imagelink" target="_blank" href="//mymediapro.ru"><img src="images/mmp-logo.png" alt="Мы делаем сайты"/></a>Сделано с любовью в <a target="_blank" href="//mymediapro.ru">MyMediaPro</a>
                         </div>

@@ -56,3 +56,18 @@
         }
     }
 }
+
+
+@media (max-width: $base__size_md - 1 * 1px) {
+    .b-lend {
+        &__feature-item{
+            width: 100%;
+            margin: 0 auto;
+            float: none;
+            &:first-child, &:last-child{
+                margin: 0 auto;
+                width: 100%;
+            }
+        }
+    }
+}

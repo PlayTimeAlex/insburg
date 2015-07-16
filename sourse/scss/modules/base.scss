@@ -3,6 +3,11 @@ $base__color: #000;
 $base__font-size: 10;
 $base__background: #fff;
 
+$base__size_xs:480;
+$base__size_sm:768;
+$base__size_md:992;
+$base__size_lg:1200;
+
 @function em($px, $base: $base__font-size){
     @return ($px / $base) *1em;
 }

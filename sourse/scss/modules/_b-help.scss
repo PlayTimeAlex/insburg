@@ -29,3 +29,13 @@
         padding: em(30) 0;
     }
 }
+
+@media (max-width: $base__size_md - 1 * 1px) {
+    .b-help{
+        padding: em(32) 0 em(36);
+        background-image: none;
+        &__content{
+            padding-left: 0;
+        }
+    }
+}

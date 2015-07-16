@@ -20,3 +20,9 @@
         background-position: -250px 0;
     }
 }
+
+@media (max-width: $base__size_md - 1 * 1px) {
+    .b-steps{
+        background-image: none;
+    }
+}

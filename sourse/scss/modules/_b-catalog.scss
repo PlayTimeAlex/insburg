@@ -152,3 +152,16 @@
         padding: em(5) 0 em(12);
     }
 }
+
+@media (max-width: 1050px) {
+    .b-catalog{
+        &__slider{
+            .flex-prev{
+                left: 0;
+            }
+            .flex-next{
+                right: 0;
+            }
+        }
+    }
+}

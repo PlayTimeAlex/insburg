@@ -24,8 +24,11 @@
 @import "modules/reset";
 @import "modules/grid";
 .container{
-    width: 980px;
+    width: 100%;
     margin: 0 auto;
+    max-width: 1012px;
+    padding: 0 em(9);
+    box-sizing: border-box;
 }
 .align-right{
     text-align: right;
@@ -38,7 +41,6 @@
 }
 .ui-tooltip{
     position: absolute;
-    opacity: 0.8;
     $font-size: 13;
     font-size: em($font-size);
     font-weight: 300;

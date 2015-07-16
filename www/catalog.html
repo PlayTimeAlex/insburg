@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html>
+    <html>
     <head>
         <title>Index</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=1012">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
         <link rel="stylesheet" href="css/style.min.css" media="all"/>
         <script src="js/all.min.js"></script>
         <!--[if lte IE 8 ]><script type="text/javascript">window.location.href="ie8min/index.html";</script><![endif]-->
     </head>
+
+
 <body class="body_inner">
 <header class="b-header">
     <div class="b-header__top">
@@ -18,17 +20,23 @@
                     <img src="images/headerlogo.png" alt="Insburg - Ваш страховой агент"/>
                 </a>
                 <div class="row">
-                    <div class="span3">
+                    <div class="col-xs-3 col-sm-6 col-md-3 hidden-sm hidden-xs">
                         Страховка за <span class="black">2 минуты</span>
                     </div>
-                    <div class="span5">
+                    <div class="col-xs-5 hidden-sm hidden-xs">
                         Мы в социальных сетях: <a class="pr-social" href="#vk"></a><a class="pr-social pr-social_fb" href="#fb"></a><a
-                            class="pr-social pr-social_tw" href="#twitter"></a>
+                        class="pr-social pr-social_tw" href="#twitter"></a>
                     </div>
-                    <div class="span4 align-right">
-                        Горячая линия: <span class="black">+7 (495) 123-456</span>
+                    <div class="col-xs-12 col-sm-6 col-md-4 align-right">
+                        <span class="hidden-xs">Горячая линия: </span><span class="black">+7 (495) 123-456</span>
                     </div>
                 </div>
+            </div>
+            <button class="b-header__nav-open"></button>
+            <div class="b-header__mob-nav">
+                <a class="b-header__mob-nav-link current" href="index.html">Главная</a>
+                <a class="b-header__mob-nav-link" href="avtostraxf.html">Автострахование</a>
+                <a class="b-header__mob-nav-link" href="catalog.html">Страховые компании</a>
             </div>
         </div>
     </div>
@@ -81,30 +89,43 @@
         </div>
         <div class="b-catalog__header">
             <div class="row">
-                <div class="span4">
+                <div class="col-xs-12 col-sm-4">
                     <span class="title">Название компании</span>
+                    <div class="pr-separator visible-xs">
+                        <span class="name">ERGO Русь</span>
+                    </div>
+
                 </div>
-                <div class="span2">
+                <div class="col-xs-12 col-sm-2">
                     <span class="title">Рейтинг Insburg<span class="pr-help js-tooltip" title="Текст подсказки"></span></span>
+                    <div class="pr-separator visible-xs">
+                        <div data-ro="1" data-score="3" class="pr-rating b-catalog__rating visible-xs" style="padding-top:5px;"></div>
+                    </div>
                 </div>
-                <div class="span3">
+                <div class="col-xs-12 col-sm-3">
                     <span class="title">Рейтинг Экспертов<span class="pr-help js-tooltip" title="Текст подсказки"></span></span>
+                    <div class="pr-separator visible-xs">
+                        <div data-ro="1" data-score="3" class="pr-rating b-catalog__rating" style="padding-top:5px;"></div>
+                    </div>
                 </div>
-                <div class="span2">
+                <div class="col-xs-12 col-sm-2">
                     <a class="open-popup b-catalog__ad-link" href="#addreview">Оставить отзыв</a>
+                    <div class="pr-separator visible-xs">
+                        <a class="b-catalog__rules-link" href="text.html">Правила страхования</a>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="span4">
+            <div class="row hidden-xs">
+                <div class="col-xs-12 col-xs-4">
                     <span class="name">ERGO Русь</span>
                 </div>
-                <div class="span2">
+                <div class="col-xs-12 col-xs-2">
                     <div data-ro="1" data-score="3" class="pr-rating b-catalog__rating"></div>
                 </div>
-                <div class="span3">
+                <div class="col-xs-12 col-xs-3">
                     <div data-ro="1" data-score="3" class="pr-rating b-catalog__rating"></div>
                 </div>
-                <div class="span3">
+                <div class="col-xs-12 col-xs-3">
                     <a class="b-catalog__rules-link" href="text.html">Правила страхования</a>
                 </div>
             </div>
@@ -115,104 +136,65 @@
         </div>
         <div class="b-review">
             <h2 class="b-review__title">Отзывы клиентов</h2>
-
-            <div class="b-review__slider">
-                <a class="b-review__slider-prev" href="#" title="Предыдущий отзыв">Предыдущий отзыв</a>
-                <a class="b-review__slider-next" href="#" title="Следующий отзыв">Следующий отзыв</a>
-                <ul class="slides">
-                    <li>
-                        <div class="b-review__item">
-                            <div class="row">
-                                <div class="span3">
-                                    <h4>Персонал</h4>
-                                </div>
-                                <div class="span3">
-                                    <h4>Персонал</h4>
-                                </div>
-                                <div class="span2">
-                                    <h4>Выплаты</h4>
-                                </div>
-                                <div class="span4">
-                                    <h4>Доступность</h4>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="span3">
-                                    <p>(вежливость/компетентность)</p>
-                                </div>
-                                <div class="span3">
-                                    <p>(вежливость/компетентность)</p>
-                                </div>
-                                <div class="span2">
-                                    <p>(размеры/сроки)</p>
-                                </div>
-                                <div class="span4">
-                                    <p>(Оперативная связь / Расположение/Сервис-центры).</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="span3">
-                                    <div data-ro="1" data-score="3" class="pr-rating b-review__rating"></div>
-                                </div>
-                                <div class="span3">
-                                    <div data-ro="1" data-score="3" class="pr-rating b-review__rating"></div>
-                                </div>
-                                <div class="span2">
-                                    <div data-ro="1" data-score="3" class="pr-rating b-review__rating"></div>
-                                </div>
-                                <div class="span4">
-                                    <div data-ro="1" data-score="3" class="pr-rating b-review__rating"></div>
-                                </div>
-                            </div>
+            <div class="b-review__item">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-3">
+                        <h4>Персонал</h4>
+                        <div class="visible-xs">
+                            <p>(вежливость/компетентность)</p>
+                            <div data-ro="1" data-score="3" class="pr-rating b-review__rating"></div>
                         </div>
-                    </li>
-                    <li>
-                        <div class="b-review__item">
-                            <div class="row">
-                                <div class="span3">
-                                    <h4>Персонал</h4>
-                                </div>
-                                <div class="span3">
-                                    <h4>Персонал</h4>
-                                </div>
-                                <div class="span2">
-                                    <h4>Выплаты</h4>
-                                </div>
-                                <div class="span4">
-                                    <h4>Доступность</h4>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="span3">
-                                    <p>(вежливость/компетентность)</p>
-                                </div>
-                                <div class="span3">
-                                    <p>(вежливость/компетентность)</p>
-                                </div>
-                                <div class="span2">
-                                    <p>(размеры/сроки)</p>
-                                </div>
-                                <div class="span4">
-                                    <p>(Оперативная связь / Расположение/Сервис-центры).</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="span3">
-                                    <div data-ro="1" data-score="3" class="pr-rating b-review__rating"></div>
-                                </div>
-                                <div class="span3">
-                                    <div data-ro="1" data-score="3" class="pr-rating b-review__rating"></div>
-                                </div>
-                                <div class="span2">
-                                    <div data-ro="1" data-score="3" class="pr-rating b-review__rating"></div>
-                                </div>
-                                <div class="span4">
-                                    <div data-ro="1" data-score="3" class="pr-rating b-review__rating"></div>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <h4>Персонал</h4>
+                        <div class="visible-xs">
+                            <p>(вежливость/компетентность)</p>
+                            <div data-ro="1" data-score="3" class="pr-rating b-review__rating"></div>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-2">
+                        <h4>Выплаты</h4>
+                        <div class="visible-xs">
+                            <p>(размеры/сроки)</p>
+                            <div data-ro="1" data-score="3" class="pr-rating b-review__rating"></div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <h4>Доступность</h4>
+                        <div class="visible-xs">
+                            <p>(Оперативная связь / Расположение/Сервис-центры).</p>
+                            <div data-ro="1" data-score="3" class="pr-rating b-review__rating"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row hidden-xs">
+                    <div class="col-sm-3">
+                        <p>(вежливость/компетентность)</p>
+                    </div>
+                    <div class="col-sm-3">
+                        <p>(вежливость/компетентность)</p>
+                    </div>
+                    <div class="col-sm-2">
+                        <p>(размеры/сроки)</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p>(Оперативная связь / Расположение/Сервис-центры).</p>
+                    </div>
+                </div>
+                <div class="row hidden-xs">
+                    <div class="col-sm-3">
+                        <div data-ro="1" data-score="3" class="pr-rating b-review__rating"></div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div data-ro="1" data-score="3" class="pr-rating b-review__rating"></div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div data-ro="1" data-score="3" class="pr-rating b-review__rating"></div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div data-ro="1" data-score="3" class="pr-rating b-review__rating"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -220,79 +202,109 @@
 <div style="display:none;">
     <div  id="addreview">
         <h2 class="b-popup__title">Добавление отзыва</h2>
-        <img class="b-catalog__adr-logo" src="images/content/logo1.png" alt="Ergo русь"/>
+        <img class="b-catalog__adr-logo hidden-xs" src="images/content/logo1.png" alt="Ergo русь"/>
         <form action="/">
-            <div class="b-review__item b-review__item_popup">
-                <div class="row">
-                    <div class="span5">
-                        <h4>Персонал</h4>
+            <div class="container">
+                <div class="b-review__item b-review__item_popup">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-5">
+                            <h4>Персонал</h4>
+                            <div class="pr-separator visible-xs">
+                                <p>(вежливость/компетентность)</p>
+                                <div class="pr-rating b-review__rating"></div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <h4>Доступность</h4>
+                            <div class="pr-separator visible-xs">
+                                <p>(Оперативная связь / Расположение/Сервис-центры).</p>
+                                <div class="pr-rating b-review__rating"></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="span6">
-                        <h4>Доступность</h4>
+                    <div class="row hidden-xs">
+                        <div class="col-xs-12 col-sm-5">
+                            <p>(вежливость/компетентность)</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <p>(Оперативная связь / Расположение/Сервис-центры).</p>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="span5">
-                        <p>(вежливость/компетентность)</p>
-                    </div>
-                    <div class="span6">
-                        <p>(Оперативная связь / Расположение/Сервис-центры).</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="span5">
-                        <div class="pr-rating b-review__rating"></div>
-                    </div>
-                    <div class="span6">
-                        <div class="pr-rating b-review__rating"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="b-review__item b-review__item_popup">
-                <div class="row">
-                    <div class="span5">
-                        <h4>Персонал</h4>
-                    </div>
-                    <div class="span6">
-                        <h4>Персонал</h4>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="span5">
-                        <p>(вежливость/компетентность)</p>
-                    </div>
-                    <div class="span6">
-                        <p>(вежливость/компетентность)</p>
+                    <div class="row hidden-xs">
+                        <div class="col-xs-12 col-sm-5">
+                            <div class="pr-rating b-review__rating"></div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="pr-rating b-review__rating"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="span5">
-                        <div class="pr-rating b-review__rating"></div>
+                <div class="b-review__item b-review__item_popup">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-5">
+                            <h4>Персонал</h4>
+                            <div class="pr-separator visible-xs">
+                                <p>(вежливость/компетентность)</p>
+                                <div class="pr-rating b-review__rating"></div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <h4>Персонал</h4>
+                            <div class="pr-separator visible-xs">
+                                <p>(вежливость/компетентность)</p>
+                                <div class="pr-rating b-review__rating"></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="span6">
-                        <div class="pr-rating b-review__rating"></div>
+                    <div class="row hidden-xs">
+                        <div class="col-xs-12 col-sm-5">
+                            <p>(вежливость/компетентность)</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <p>(вежливость/компетентность)</p>
+                        </div>
+                    </div>
+                    <div class="row hidden-xs">
+                        <div class="col-xs-12 col-sm-5">
+                            <div class="pr-rating b-review__rating"></div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="pr-rating b-review__rating"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row b-catalog__bf">
-                <div class="span7">
-                    <h3 class="b-catalog__adr-title js-anonimfiels">Контактные Данные</h3>
+                <div class="row b-catalog__bf">
+                    <div class="col-xs-12 col-sm-7">
+                        <h3 class="b-catalog__adr-title js-anonimfiels">Контактные Данные</h3>
+                    </div>
+                    <div class="col-xs-12 col-sm-5 align-right">
+                        <label class="b-form__checkbox-l"><input class="js-anonimreview" type="checkbox"/>Добавить отзыв анонимно</label>
+                    </div>
                 </div>
-                <div class="span5 align-right">
-                    <label class="b-form__checkbox-l"><input class="js-anonimreview" type="checkbox"/>Добавить отзыв анонимно</label>
+                <div class="js-anonimfiels">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="b-form__el">
+                                <input class="b-form__text b-form__text_block" type="text" placeholder="Имя / Фамилия"/>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="b-form__el">
+                                <input class="b-form__text b-form__text_block" type="tel" placeholder="Телефон"/>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="b-form__el">
+                                <input class="b-form__text b-form__text_block" type="email" placeholder="Эл.Почта"/>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="b-form__el js-anonimfiels">
-                <div class="row">
-                    <div class="span4"><input class="b-form__text b-form__text_block" type="text" placeholder="Имя / Фамилия"/></div>
-                    <div class="span4"><input class="b-form__text b-form__text_block" type="tel" placeholder="Телефон"/></div>
-                    <div class="span4"><input class="b-form__text b-form__text_block" type="email" placeholder="Эл.Почта"/></div>
+                <div class="row b-catalog__adr-bottom">
+                    <div class="col-xs-12 col-sm-8"><label class="b-form__checkbox-l"><input type="checkbox"/>Я ознакомился внимательно и согласен с
+                        <a target="_blank" href="text.html">правилами</a> оценки страховых компаний на сайте Insburg.ru</label></div>
+                    <div class="col-xs-12 col-sm-4"><button class="pr-button pr-button_block" type="submit">Оставить отзыв</button></div>
                 </div>
-            </div>
-            <div class="row b-catalog__adr-bottom">
-                <div class="span8"><label class="b-form__checkbox-l"><input type="checkbox"/>Я ознакомился внимательно и согласен с
-                    <a target="_blank" href="text.html">правилами</a> оценки страховых компаний на сайте Insburg.ru</label></div>
-                <div class="span4"><button class="pr-button pr-button_block" type="submit">Оставить отзыв</button></div>
             </div>
         </form>
     </div>
@@ -300,16 +312,16 @@
         <footer class="b-footer">
             <div class="container">
                 <div class="row">
-                    <div class="span4">
+                    <div class="col-md-4 col-xs-12 col-sm-6">
                         <div class="b-footer__logo">
                             Insburg.ru<br />
                             Все права защишенны
                         </div>
                     </div>
-                    <div class="span4">
+                    <div class="col-md-4 col-xs-12 col-sm-6">
                         <div class="b-footer__nav"><a href="text.html">О нас</a><a href="#">Контакты</a><a href="text.html">Правовая информация</a></div>
                     </div>
-                    <div class="span4">
+                    <div class="col-md-4 col-xs-12">
                         <div class="b-created">
                             <a class="b-created__imagelink" target="_blank" href="//mymediapro.ru"><img src="images/mmp-logo.png" alt="Мы делаем сайты"/></a>Сделано с любовью в <a target="_blank" href="//mymediapro.ru">MyMediaPro</a>
                         </div>

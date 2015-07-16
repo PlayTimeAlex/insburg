@@ -13,3 +13,9 @@
         color: #00d2ff;
     }
 }
+
+@media (max-width: $base__size_md - 1 * 1px) {
+    .b-created{
+        text-align: center;
+    }
+}

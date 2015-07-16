@@ -9,6 +9,7 @@
         line-height: 30px;
         border-bottom: 1px solid #f6f7f9;
         box-shadow: 0 0 0 1px #e1e5ea;
+        position: relative;
         .black{
             color: #000;
         }
@@ -25,6 +26,7 @@
         font-size: em($font-size);
         color: #000;
         padding: 0 em(21, $font-size);
+        display: inline-block;
         &:first-child{
             padding-left: 0;
         }
@@ -44,7 +46,7 @@
         cursor: pointer;
         top: 0;
         left: 0;
-        z-index: 10;
+        z-index: 60;
         img{
             display: block;
             margin: 22px auto 0;
@@ -60,7 +62,7 @@
         background-color: transparent;
     }
     &_lend{
-        background: url(../images/lend1.jpg) no-repeat center top #eceef2;
+        background: url(../images/lend2.jpg) no-repeat center top #eceef2;
         background-size: cover;
         .b-promo{
             &:after{
@@ -72,6 +74,83 @@
                 height: 13px;
                 background: url(../images/b-features__border.png) repeat-x center 0;
                 bottom: 0;
+            }
+        }
+    }
+    &__nav-open{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 75px;
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiIFs8IUVOVElUWSBuc19mbG93cyAiaHR0cDovL25zLmFkb2JlLmNvbS9GbG93cy8xLjAvIj5dPjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWxuczphPSJodHRwOi8vbnMuYWRvYmUuY29tL0Fkb2JlU1ZHVmlld2VyRXh0ZW5zaW9ucy8zLjAvIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjJweCIgdmlld0JveD0iMCAwIDI0IDIyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNCAyMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGRlZnM+PC9kZWZzPjxwYXRoIGZpbGw9IiMyNEIzQTciIGQ9Ik0yMy4yNDQsMTZIMC43NUMwLjMzNywxNiwwLDE2LjM1OSwwLDE2LjgwMnYzLjQyMWMwLDAuNDI0LDAuMzM3LDAuNzcsMC43NSwwLjc3aDIyLjQ5NGMwLjQxNCwwLDAuNzUtMC4zNDYsMC43NS0wLjc3di0zLjQyMUMyMy45OTQsMTYuMzU5LDIzLjY1OCwxNiwyMy4yNDQsMTZ6IE0yMy4yNDQsOEgwLjc1QzAuMzM3LDgsMCw4LjM2LDAsOC44MDF2My40MmMwLDAuNDI0LDAuMzM3LDAuNzcxLDAuNzUsMC43NzFoMjIuNDk0YzAuNDE0LDAsMC43NS0wLjM0NywwLjc1LTAuNzcxdi0zLjQyQzIzLjk5NCw4LjM2LDIzLjY1OCw4LDIzLjI0NCw4eiBNMjMuMjQ0LDBIMC43NUMwLjMzNywwLDAsMC4zNiwwLDAuODAxdjMuNDJDMCw0LjY0NCwwLjMzNyw0Ljk5LDAuNzUsNC45OWgyMi40OTRjMC40MTQsMCwwLjc1LTAuMzQ2LDAuNzUtMC43Njl2LTMuNDJDMjMuOTk0LDAuMzYsMjMuNjU4LDAsMjMuMjQ0LDB6Ii8+PC9zdmc+) center center no-repeat;
+        display: none;
+        border: none;
+        cursor: pointer;
+    }
+    &__mob-nav{
+        display: none;
+        &.open{
+            display: none!important;
+        }
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        left: 0;
+        z-index: 50;
+        padding: em(10) 0;
+        background-color: rgba(0, 0, 0, .8);
+    }
+    &__mob-nav-link{
+        display: block;
+        $font-size: 14;
+        font-size: em($font-size);
+        padding: em(5, $font-size) em(10, $font-size);
+        text-decoration: none;
+        color: #ffffff;
+        border-bottom:1px solid rgba(255,255,255,.3);
+        &:last-child{
+            border-bottom: none;
+        }
+    }
+}
+
+@media (max-width: $base__size_md - 1 * 1px) {
+    .b-header{
+        &__logo{
+            width: 94px;
+            height: 84px;
+            padding: 0 6px;
+            img{
+                margin: 7px auto 0;
+                width: 100%;
+            }
+        }
+        &_home{
+            background-size: 2000px auto;
+        }
+        &__bottom {
+            display: none;
+        }
+        &__container{
+            padding: .8em 75px .8em 90px;
+        }
+        &__nav-link{
+            $font-size: 17;
+            padding-top: em(5, $font-size);
+            padding-bottom: em(5, $font-size);
+            &:first-child{
+                padding-left: em(21, $font-size);
+            }
+        }
+        &__nav-open{
+            display: block;
+            
+        }
+        &__mob-nav{
+            padding-top: em(30);
+            &.open{
+                display: block!important;
             }
         }
     }

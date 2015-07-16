@@ -32,12 +32,25 @@
 
         //tooltips
         $( ".js-tooltip" ).tooltip({ position: { my: "center top", at: "center top-58px" } });
+        if( /iPhone|iPad|iPod|/i.test(navigator.userAgent) ) {
+            $(".js-tooltip").on('click touchstart', function(e){
+                $(this).tooltip( "open" );
+            });
+            $('body').on('click touchstart', function(e){
+                var target = $(e.target);
+                if ( !target.is( ".ui-tooltip" ) && !target.is( ".js-tooltip" ) ) {
+                    $( ".js-tooltip" ).tooltip( "close" );
+                }
+            });
+        }
 
         //colorbox popup
         $('.open-popup').colorbox({
             inline:true,
             close: "",
             width: "675px",
+            maxWidth: "90%",
+            fixed: false,
             onOpen: function(){
                 setTimeout(function(){
                     $('#cboxClose').animate({
@@ -367,6 +380,20 @@
             elem.wrap('<div class="b-mousenum__wrap"></div><div>');
             elem.parent().append(numpad);
         }
+
+        //открытие меню на мобиле
+        $('.b-header__nav-open').on('click', function(){
+            $menu = $('.b-header__mob-nav');
+            if($menu.hasClass('open')){
+                $menu.slideUp(150, function(){
+                    $(this).removeClass('open');
+                });
+                return false;
+            }
+            $menu.slideDown(150, function(){
+                $(this).addClass('open');
+            });
+        });
     });
 
     $(window).load(function() {

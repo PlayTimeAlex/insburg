@@ -28,3 +28,16 @@
         }
     }
 }
+
+@media (max-width: $base__size_sm - 1 * 1px) {
+    .b-footer{
+        &__logo{
+            text-align: center;
+            background-position: 50% 0;
+            padding: 40px 0 0;
+        }
+        &__nav{
+            padding: em(25) 0;
+        }
+    }
+}

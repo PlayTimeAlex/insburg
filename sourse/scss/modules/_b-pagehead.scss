@@ -23,3 +23,13 @@
         padding-bottom: em(140);
     }
 }
+
+@media (max-width: $base__size_md - 1 * 1px) {
+    .b-pagehead{
+        &__title{
+            color: #fff;
+            $font-size: 33;
+            font-size: em($font-size);
+        }
+    }
+}
